@@ -1,0 +1,875 @@
+<!-- text-1: reduce font-size @<420px w
+		reduce font-size @<1200px w
+
+navbar-list: do something to font or container size @<1115px
+clip -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inventory Management System</title>
+	<meta name="viewport" http-equiv="Content-Type" content="text/html; charset=UTF-8 width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet'>
+
+	<!-- ICON  -->
+	<link rel="icon" href="img/workshop-img/nonamelogo.png">
+
+	<!-- CSS -->
+	<style type="text/css">
+		html
+		{
+			scroll-behavior: smooth;
+		}
+		.logo
+		{
+			height: 48px;
+		}
+		.navbar
+		{
+			background-color: #1f2026;
+			position: sticky;
+			z-index: 1;
+		}
+		 .navbar-toggler-icon {
+		  background-image: url("img/workshop-img/h-icon.png");
+		}
+		body
+		{
+			/*background: radial-gradient(50% 50% at 50% 50%, #2F303A 52.97%, #1F2026 100%);*/
+			background-color: #1F2026;
+			
+			mix-blend-mode: normal;
+			font-family: 'Inter', sans-serif;
+			/*font-weight: 300;*/
+
+			color: #FFFFFF;
+		}
+		.lemon
+		{
+			color: #ffffff;
+		}
+		.lemon:hover
+		{
+			color: #ffb20a;
+		}
+		.footer
+		{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: #3b4263;
+			color: #FFFFFF;
+			text-align: center;
+			padding-top:10px;
+			padding-bottom: 10px; 
+			opacity: 1;
+		}
+		.footer a
+		{
+			color: #FFFFFF;
+		}
+		.cross
+		{
+			position: absolute;
+			right: 2%;
+			height: 20px;
+			width: 20px;
+
+		}
+		h1
+		{
+			font-weight: 500;
+			font-size: 45px;
+		}
+		h2
+		{
+			font-size: 25px;
+			font-weight: 500;
+		}
+		.dci
+		{
+			font-size: 20px;
+			font-weight: 300;
+		}
+		h3
+		{
+			font-size: 16px;
+			font-weight: 300;
+			/*word-spacing: 0.1em;*/
+		}
+		h4
+		{
+			font-size: 10px;
+		}
+		hr 
+		{
+			background-color: #ffb20a;
+			height: 2px;
+
+		}
+		.uni
+		{
+			/*height: 60px;*/
+			width: 100%;
+			filter: drop-shadow(5px 5px 6px #000000)
+		}
+		.atoz
+		{
+			font-size: 20px;
+		}
+		.heavy
+		{
+			font-size: 25px;
+			font-weight: 500;
+		}
+		.btn
+		{
+			/*border-radius: 30px;*/
+			/*background: radial-gradient(58.75% 58.75% at 75.7% 41.25%, #2F303A 0%, #151515 100%);*/
+			background: linear-gradient(268.38deg, #F0BD4E -0.01%, #FFAF00 100%);
+         	box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.2);
+			border-radius: 141.429px;
+			border-radius: 100px;
+			height: 60px;
+			/*border-color: #ffb20a;*/
+			color: #ffffff;
+
+		}
+		.creds
+		{
+			font-size: 20px;
+		}
+		.nike
+		{
+			font-weight: 500; font-size: 18px; color: #ffb20a;
+		}
+		.hts
+		{
+			width: 60%;
+			/*height: 120px;
+			width: 120px;*/
+		}
+		.rs-text
+		{
+			line-height: 55px;
+		}
+
+		.r-icon
+		{
+			height: 40px;
+			width: 40px;
+		}
+		.ques
+		{
+			font-size: 30px;
+			font-weight: 500;
+			line-height: 56px;
+			font-style: normal;
+		}
+		.button-text
+		{ 
+			font-weight: 700;
+			font-size: 25px;
+			line-height: 33px;
+			text-align: center;
+
+			color: #1F2026;
+
+			text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07), -45px 45px 70px rgba(0, 0, 0, 0.2), -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+		}
+		.cost
+		{
+			font-size: 30px;
+		}
+		.cost1
+		{
+			font-size: 38px;
+			font-weight: 700;
+		}
+		.flat75
+		{
+			font-size: 35px;
+			font-weight: 700;
+			color: #ffb20a; 
+		}
+		.theading
+		{
+			color: #ffb20a;
+		}
+		.vr
+		{
+			color: #ffb20a;
+		}
+		.vid-ad{
+			filter: drop-shadow(0px 10px 20px #000000);
+		}
+		.mail-icon
+		{
+			width: 40%;
+		}
+		.btn:hover
+	    {
+	    	
+	    	animation: buttonshadow 0.4s ease-out;
+	    	animation-fill-mode: forwards;
+		}
+		.mail-icon:hover
+		{
+			animation: buttonshadow 0.4s ease-out;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes buttonshadow
+		{
+			from {filter: drop-shadow(0px 0px 0px #000000);}
+			to {filter: drop-shadow(0px 8px 20px #000000);}
+
+		}
+
+		.n1
+		{
+			animation: navbarfade 1s ease-out;
+			animation-fill-mode: forwards;
+		}
+		@keyframes navbarfade
+		{
+			from {top: -12vh; opacity: 0;}
+			to {top: 0vh; opacity: 1;}
+
+		}
+		li a 
+		{
+			color: #ffffff;
+			/*padding: 1.2vh 1.5vw;*/
+			border-radius: 35px;
+			font-size: 1.464vw;
+
+		}
+		li a:hover
+		{
+			background-color: #ffb20a;
+			color: #000000;
+		}
+		.active
+		{
+			border-radius: 35px;
+			background-color: #606ca3;
+			color: #ffffff;
+		}
+		.asp-text
+		{
+			font-size: 22px;
+		}
+		.rs-text
+		{
+			font-size: 22px;
+		}
+
+		@media only screen and (max-width: 768px) {
+		  .button-text
+		  {
+		  	font-size: 18px;
+		  }
+		  .ques
+		  {
+		  	font-size: 20px;
+		  }
+		  .asp-text
+		  {
+		  	font-size: 18px;
+		  }
+		  .rs-text
+		  {
+		  	font-size: 18px;
+		  	line-height: 25px;
+		  }
+		  .ht-text
+		  {
+		  	font-size: 20px;
+		  }
+		  .nike
+			{
+				font-size: 14px;
+			}
+		  .mail-icon
+		  {
+		  	width: 150%;
+		  }
+		}
+
+		@media only screen and (max-width: 460px) {
+			.logo
+			{
+				height: 30px;
+
+			}
+			.nike
+			{
+				font-size: 14px;
+			}
+			.creds
+			{
+				font-size: 15px;
+				padding-top: 30px; 
+				padding-left: 50px;
+				padding-right: 15px;
+			}
+			.spk
+			{
+				text-align: center !important;
+			}
+			h1
+			{
+				font-size: 22px;
+			}
+			.heavy
+			{
+				font-size: 18px;
+				font-weight: 500;
+			}
+			.atoz
+			{
+				font-size: 16px;
+			}
+			h2
+			{
+				font-size: 21px;
+			}
+			.dci
+			{
+				padding-top: 20px !important;
+				font-size: 18px;
+			}
+		  .button-text
+		  {
+		  	font-size: 12px;
+		  	font-weight: 700;
+		  }
+		  .btn
+		  {
+		  	padding-top: 0;
+		  	padding-bottom: 0;
+		  	height: 60px
+		  }
+		  .ques
+		  {
+		  	font-size: 15px;
+		  }
+		  .asp-text
+		  {
+		  	font-size: 13px;
+		  }
+		  .rs-text
+		  {
+		  	font-size: 13px;
+		  	line-height: 20px;
+		  }
+		  .ht-text
+		  {
+		  	font-size: 15px;
+		  }
+		  h3
+		  {
+		  	font-size: 13px;
+		  }
+
+		}
+
+
+
+		
+	</style>
+</head>
+<body>
+		<nav class="navbar navbar-expand-md
+		 navbar-fixed-top n1">
+			<a href="index.html" class="navbar-brand ml-md-3 mx-auto">
+				<!-- LOGO -->
+				<img class="logo" src="https://www.vecteezy.com/free-vector/vector">
+			</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+   			<span class="navbar-toggler-icon"></span>
+ 			</button>
+  			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			    <div class="navbar-nav ml-auto">
+				      <a class="nav-item nav-link px-2 mx-3 lemon" href="#speaker">Products</a>
+				      <a class="nav-item nav-link px-2 mx-3 lemon" href="#highlights">Locations</a>
+				      <a class="nav-item nav-link px-2 mx-3 lemon" href="#faqs">Product Movements</a>
+				      <a class="nav-item nav-link px-2 mx-3 lemon" href="#testimonials">Reports</a>
+
+			    </div>
+  			</div>
+		</nav>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center pt-4 pt-md-2">
+					<h1>
+						Inventory Management System
+					</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 text-center">
+					<h3 class="atoz">
+						Manage all your inventory at one place!	
+					</h3>
+					<hr class="mt-3 mx-5 hr1">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 col-md-6 pt-2 pb-2">
+					<div class="embed-responsive embed-responsive-16by9 vid-ad">
+						<!-- <video ></video> -->
+						<iframe class="embed-responsive-item vid-ad" src="https://www.youtube.com/embed/9rklGQCAH9s?controls=0&rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					
+				</div>
+				<div class="col-12 col-md-6 pt-1">
+					<h2 class="text-center dci" style="font-weight:500;">
+					    <!-- &nbsp&nbsp&nbsp&nbspThe Objective -->
+					    Designed, Conducted and Inspired by engineers from the most presitigious universities
+					</h2>
+					<div class="row py-3">
+						<div class="col-3 text-center my-auto">
+							<img class="uni" src="img/workshop-img/workshop/cu.png">
+						</div>
+						<div class="col-3 text-center my-auto">
+							<img class="uni" src="img/workshop-img/workshop/gtech.png">
+						</div>
+						<div class="col-3 text-center my-auto">
+							<img class="uni" src="img/workshop-img/workshop/uwm.png">
+						</div>
+						<div class="col-3 text-center my-auto">
+							<img class="uni" src="img/workshop-img/workshop/psu.png">
+						</div>
+					</div>
+					<!-- <h3 class="pt-2">
+						<ul>
+							<li>
+								To make sure students are aware about all the nitty-gritties that need to be taken care of during the MS application process.
+							</li>
+							<br>
+							<li>
+								To guide them to build an application that stands out from the rest & give them a chance to lead.
+							</li>
+							<br>
+							<li>
+								To be a knowledge space that is affordable to all students, from all over the world.
+							</li>
+						</ul>
+					</h3> -->
+					<!-- <h2 class="text-center dci" style="font-weight: 400;">
+						<span ><br>&nbsp&nbsp&nbspDate: 18<sup>th</sup>, 19<sup>th</sup> & 20<sup>th</sup> September<br>
+						&nbsp&nbsp&nbspTime: 6pm onwards</span>
+						
+					</h2>
+ -->					<a href="#testimonials"><h2 class="dci text-center pt-3" style="color: #ffb20a; font-style: italic;">See what students have to say about us!&nbsp&nbsp>></h2></a>
+				</div>
+			</div>
+			<div class="row" id="schedule">
+				<div class="col-12 text-center pt-4">
+					<a href="https://imjo.in/XwetHh">
+						<button type="button" class="btn btn-warning" ><span class="button-text px-5 py-2">REGISTER NOW AT INR 999/- ONLY</span></button>						
+					</a>					
+				</div>
+			</div>
+
+			<div class="row pt-5" >
+				<div class="col-12">
+					<h2 class="text-center">
+						SCHEDULE
+					</h2>
+				</div>
+			</div>
+			<div class="row pt-3">
+				<div class="col-2"></div>
+				<div class="col-md-8 col-12">
+					<h2 class="text-center">
+						Day 1<!-- : 18<sup>th</sup> September 2020 -->
+					</h2>
+					<h3>
+						<ol>
+							<li class="pt-1">How do you choose the perfect domain, city and specialization for yourself?</li>
+							<li class="pt-1">How do you classify universities into 'Safe', 'Moderate' and 'Ambitious' for your profile?</li>
+							<li class="pt-1">How do you secure an RA/TA position, even before you apply to an university?</li>
+							<li class="pt-1">How do you find courses that are easier to get into?</li>
+							<li class="pt-1"><span class="pt-1" style="color:#ffb20a; font-weight: 400;">BONUS:</span> What are the things to keep in mind while applying through the University portal?</li>
+						</ol>
+					</h3>
+					<h2 class="text-center">
+						Day 2<!-- : 19<sup>th</sup> September 2020 -->
+					</h2>
+					<h3>
+						<ol>
+							<li class="pt-1">How do you write an effective Statement Of Purpose?</li>
+							<li class="pt-1">What can we learn by analysing SOPs of top university admits?</li>
+							<li class="pt-1">How do you write an impactful Letter of Recommendation?</li>
+							<li class="pt-1">How to build a perfect Resume to catch the eyes of the admission committee?</li>
+							<li class="pt-1">How to make your application speak for you?</li>
+							<li class="pt-1"><span class="pt-1" style="color:#ffb20a; font-weight: 400;">BONUS:</span> How to build a network and find an internships as well as jobs abroad?</li>
+							
+							
+						</ol>
+
+					</h3>
+					<h2 class="pt-2 text-center">
+						Day 3<!-- : 20<sup>th</sup> September 2020 -->
+					</h2>
+					<h3>
+						<ol>
+							<li class="pt-1">What are the types education loans and which is the best one?</li>
+							<li class="pt-1">How to apply for the education loan of your choice?</li>
+							<li class="pt-1">How to earn scholarships that pay off your tuition fees?</li>
+							<li class="pt-1">What are the most important things to keep in mind while applying for a Visa?</li>
+							<li class="pt-1" id="resources">How to prepare for the Visa interview? <span style="color:#00D509;">DOs</span> and <span style="font-weight:500; color:#C10000;">DON'Ts</span> that you should follow.</li>				
+						</ol>
+
+					</h3>
+				</div>
+				<div class="col-2"></div>
+			</div>
+			<hr class="my-md-3 my-3" style="background-color: #606ca3; width: 40%;">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="ques">
+						Resources
+					</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 text-center pt-2" >
+					<h2 class="rs-text" style="font-weight: 500;">
+						Industry-Specific Hub City List for Top Countries  <span class="vr">|</span>  Less Competitive Course Collection for Universities in the USA <span class="vr">|</span> Indian Scholarships' Record <span class="vr">|</span> MS Internship Hacks <span class="vr">|</span> SOP Checklist <span class="vr">|</span> SOP Cheatsheet <span class="vr">|</span> LOR Checklist <span class="vr">|</span> LOR Cheatsheet <span class="vr">|</span> Visa Guides <span class="vr">|</span> Loan Guides <span class="vr">|</span> Employability Ranks <span class="vr">|</span> GRE & GPA Master Resource for Universities in the USA
+					</h2>
+					
+				</div>
+
+			</div>
+			<div class="row text-center">
+				<div class="col-12 pt-4">
+					<a href="https://imjo.in/XwetHh">
+						<button type="button" class="btn btn-warning" id="speaker"><span class="button-text px-5 py-2">REGISTER NOW AT INR 999/- ONLY</span></button>
+					</a>
+				</div>
+			</div>
+			<div class="row" >
+				<div class="col-12 pt-5 text-center">
+					<h2 class="ques">
+						Our Lead Speaker:
+					</h2>
+				</div>
+			</div>
+			<div class="row pb-3">
+				<div class="col-md-6 col-12 text-right spk">
+					<img src="img/workshop-img/workshop/speaker.png" style="width: 200px;">
+				</div>
+				<div class="col-md-6 col-12 my-auto">
+					<h2 class="creds" style="font-weight: 300;">
+						GPA: 7.4<br>
+						GRE: 318 [Quants-166, Verbal-152]<br>
+						Admit: <span style="color: #00D509;">Cornell University</span><br>
+						Counsellor: <span style="color:#C10000; font-weight:600;" id="highlights">NONE</span>
+					</h2>
+				</div>
+			</div>
+			<hr class="my-md-5 my-3" style="background-color: #606ca3; width: 70%;">
+			<div class="row">
+				<div class="col-12 pt-3 text-center">
+					<h2 class="ques" id="testing">
+						Highlights of the Workshop:
+					</h2>
+				</div>
+			</div>
+			<div class="row pt-4">
+				<div class="col-3">
+					<div class="row justify-content-center">
+						<img class="hts" src="img/workshop-img/workshop/highlights/1.png">						
+					</div>
+					<div class="row justify-content-center pt-3">
+						<h2 class="text-center ht-text">
+							Recorded Sessions
+						</h2>
+					</div>					
+				</div>
+				<div class="col-3">
+					<div class="row justify-content-center">
+						<img class="hts" src="img/workshop-img/workshop/highlights/2.png">						
+					</div>
+					<div class="row justify-content-center pt-3">
+						<h2 class="text-center ht-text">
+							24x7 Doubt Solving
+						</h2>
+					</div>					
+				</div>
+				<div class="col-3">
+					<div class="row justify-content-center">
+						<img class="hts" src="img/workshop-img/workshop/highlights/3.png">						
+					</div>
+					<div class="row justify-content-center pt-3">
+						<h2 class="text-center ht-text">
+							Tons of Resources
+						</h2>
+					</div>					
+				</div>
+				<div class="col-3">
+					<div class="row justify-content-center">
+						<img class="hts" src="img/workshop-img/workshop/highlights/4.png">						
+					</div>
+					<div class="row justify-content-center pt-3">
+						<h2 class="text-center ht-text">
+							High ROI
+						</h2>
+					</div>					
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-12 pt-5">
+					<a href="https://imjo.in/XwetHh">
+						<button type="button" class="btn btn-warning"><span class="button-text px-5 py-2" id="faqs">REGISTER NOW AT INR 999/- ONLY</span></button>
+					</a>
+				</div>
+			</div>
+
+			<div class="row pt-md-3" >
+				<div class="col-12 text-center pt-5">
+					<h2 class="ques">
+						Who is it for?
+					<!-- <hr style="background-color: #606ca3; width: 50%;"> -->
+					</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 text-center">
+					<h3>
+						Students who are applying this year, next year, or any year after that.<br>
+						For students who have not taken admission counselling, this is the best chance to get affordable guidance for your MS Applications,<br> and for those of you who already have a counsellor, well, it’s just nicer to not be led blindly.
+					</h3>
+				</div>
+			</div>
+			<hr class="my-md-5 my-3" style="background-color: #606ca3; width: 40%;">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="ques">
+						Why people who aren’t applying this year?
+						<!-- <hr style="background-color: #606ca3; width: 70%;"> -->
+					</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 text-center">
+					<h3>
+						This workshop will teach you which university & which course to pick, what research you should focus on, how your Statement of Purpose should flow, what professor you should get your Letter of Recommendation from, and hundreds of other details. So we’ll ask, isn’t it kick-ass to always be prepared?
+					</h3>
+				</div>
+			</div>
+
+			<hr class="my-md-5 my-3" style="background-color: #606ca3; width: 40%;">
+
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="ques">
+						What do you mean by Workshop?
+					</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 text-center">
+					<h3>
+						We meant it when we said step-by-step. This workshop spans over three days with over 4 hours of recorded sessions everyday. It’s highly inclined towards a ‘do-it-while-you-learn’ ideology, rather than merely a ‘scribble notes in your notepad’ concept.  Rest assured, our guidance and suggestions will always be backed by logic, proof and research. You don’t have to, and we don’t expect you to trust us <span id="testimonials">blindly.</span> 
+					</h3>
+				</div>
+			</div>
+			<hr class="my-md-5 my-3"  style="background-color: #606ca3; width: 40%;">
+			<!-- <div class="row pt-md-3">
+				<div class="col-12 text-left px-5">
+					<h3 class="px-md-5">
+						<span class="theading">Choosing the correct industry:</span> There are over 200 domains in engineering. We aim to help you pick the right one depending on what’s trending, your interests and it’s future scope.<br><br> 
+
+						<span class="theading">Selecting the right university:</span> Choose the right university for yourself, while we guide you to not only put them into buckets of ‘Safe’, ‘Moderate’ & ‘Ambitious’, but also give you extensive resources and other hacks to do the same.<br><br> 
+
+						<span class="theading">Opting for the right course/specialization:</span> Choosing the right course is essential not only because you’ll be studying it for two years, but also because it untilmately ties back down to your OPT Extenstion & H1B.  Let’s make sure you pick out ‘the one’ for yourself. <br><br>  
+
+						<span class="theading">Securing an RA/TA position:</span> A RA/TA postion can fund you upto $25000. We’ve charted out a list of tips, tricks and procedures you can follow to secure it even before your application.<br><br> 
+
+						<span class="theading">Developing an application timeline:</span> It's a commendable practice to follow a timeline that enables you to put out your application to these dream universities as soon as it starts. We'll discuss everything you need to keep in mind for the same.<br><br> 
+
+						<span class="theading">Scholarships you can apply for:</span> We’ll guide you on how to apply to Scholarships (Indian), what are the factors they look for & also give you a list of the ones you can apply for.<br><br> 
+
+						<span class="theading">Completing your university application:</span> A live step-by-step procedure of how to send out your application to the desired university!<br><br>  
+
+						<span class="theading">Writing your Letter Of Recommendation:</span> Letters of recommendations are one of the most important documents you submit for your applications, it’s essential to make sure they’re crisp, clear & serve their purpose for the desired specialization.<br><br> 
+
+						<span class="theading">Writing your Statement Of Purpose:</span> Structure, essentials, tips, tricks and everything that will help you create a Statement of Purpose that stands out in the pile.<br><br> 
+
+						<span class="theading">Applying & Preparing for your Loan:</span> We’ll talk all about loans, the types of loans you can get, the documents you need, when to apply & other anxiety-inducing doubts that you have!<br><br> 
+
+						<span class="theading">Applying & Preparing for your Visa:</span> Get answers to all your woes regarding Visas, what to do, what not to do, how to apply and how to nail your Visa interview.<br><br> 
+
+						<span class="theading">Using LinkedIn to crack an MS Internship:</span> Other than teaching you how to use LinkedIn to evaluate your profile before you apply, we’ll also teach you how to optimize it, whom to reach out to & what to write for securing an an MS internship.<br><br> 
+					</h2>
+				</div>
+			</div> -->
+
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="ques">
+						Students love us!
+					</h2>
+				</div>
+			</div>
+			<div class="row" id="tm1">
+				<div class="col-md-4 col-6 py-4">
+					<div class="embed-responsive embed-responsive-1by1 vid-ad">
+						<!-- <video ></video> -->
+						<iframe class="embed-responsive-item vid-ad" src="https://www.youtube.com/embed/m3q3npJGkak" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="text-center pt-2 nike">Rohit Upadhyay,<br>RAIT, Mumbai</div>
+				</div>
+
+				<div class="col-md-4 col-6 py-4">
+					<div class="embed-responsive embed-responsive-1by1 vid-ad">
+						<!-- <video ></video> -->
+						<iframe class="embed-responsive-item vid-ad" src="https://www.youtube.com/embed/jCMHn7w5UQ8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="text-center pt-2 nike">Vrushali Maste,<br>TSEC, Mumbai
+					</div>
+				</div>
+
+				<div class="col-md-4 col-6 py-4">
+					<div class="embed-responsive embed-responsive-1by1 vid-ad">
+						<!-- <video ></video> -->
+						<iframe class="embed-responsive-item vid-ad" src="https://www.youtube.com/embed/9pbQiUugUGo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="text-center pt-2 nike">Ashish Gawali,<br>COEP, Pune</div>
+				</div>
+				<div class="col-md-4 col-6 py-4">
+					<div class="embed-responsive embed-responsive-1by1 vid-ad">
+						<!-- <video ></video> -->
+						<iframe class="embed-responsive-item vid-ad" src="https://www.youtube.com/embed/DQAb6mIwdCg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="text-center pt-2 nike">Mrunal Nehete,<br>K.K. Wagh, Nashik</div>
+				</div>
+
+
+				<div class="col-md-4 col-6 py-4">
+					<div class="embed-responsive embed-responsive-1by1 vid-ad">
+						<!-- <video ></video> -->
+						<iframe class="embed-responsive-item vid-ad" src="https://www.youtube.com/embed/mlM_gRuK2JE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="text-center pt-2 nike">Satyaraj Reddy,<br>Christ University, Bengaluru
+					</div>
+				</div>
+
+				<div class="col-md-4 col-6 py-4">
+					<div class="embed-responsive embed-responsive-1by1 vid-ad">
+						<!-- <video ></video> -->
+						<iframe class="embed-responsive-item vid-ad" src="https://www.youtube.com/embed/X3A_qORm2ds" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="text-center pt-2 nike">Harmanpreet Kaur,<br>Chitkara University, Chandigarh
+					</div>
+				</div>
+				<div class="col-md-4 col-3 py-4">
+				</div>
+				<div class="col-md-4 col-6 py-4">
+					<div class="embed-responsive embed-responsive-1by1 vid-ad">
+						<!-- <video ></video> -->
+						<iframe class="embed-responsive-item vid-ad" src="https://www.youtube.com/embed/soPAn0gCh-s" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="text-center pt-2 nike">Zahra Malwi,<br>Medicaps, Indore</div>
+				</div>
+				<div class="col-md-4 col-3 py-4">
+				</div>
+			</div>
+			<div class="row" id="tm1">
+				<div class="col-md-6 col-12 text-center py-3" >
+					<h3 class="text-center" style="font-style: italic;"><span style="color: #ffb20a; font-weight: 700;" >"</span>&nbspThe information I got from one single conversation was more than several counselling sessions from so called 'known consultants'. The initiative is amazing in the sense that the people at research[et al.] know what students face during the whole chaotic process of foreign admission because they themselves are people who have walked the same path. Highly recommended for students who want to navigate their way through the admission process.<span style="color: #ffb20a; font-weight: 700;" >"</span></h3>
+					<h3 class="pt-2" style="font-weight: 500; font-size: 18px; color: #ffb20a">
+						Prahlad Borthakur,<br>Delhi University						
+					</h3>					
+				</div>
+
+				<div class="col-md-6 col-12 text-center py-3" >
+					<h3 class="text-center" style="font-style: italic;"><span style="color: #ffb20a; font-weight: 700;">"</span>&nbspIt was an amazing workshop covering the nitty-gritty right from explaining the process of admission to the steps and hacks for getting a decent internship or RA & TA position.I would definitely recommend it to anyone willing to opt for Masters in coming years. It covered the details in-depth at minimal cost and provided various creative ideas to enhance our profile that otherwise wouldn't have even struck my mind.<span style="color: #ffb20a; font-weight: 700;" >"</span></h3>
+					<h3 class="pt-2" style="font-weight: 500; font-size: 18px; color: #ffb20a">
+						Shravan Chaudhari,<br>BITS Pilani						
+					</h3>					
+				</div>				
+			</div>
+
+			<div class="row text-center px-3 py-3">
+					<h3 class="text-center"><span style="color: #ffb20a; font-weight: 700;" >"</span>&nbspThe workshop was as comprehensive as it can get. They covered everything that is needed to apply for MS, including cool stuff like detailed SOP structure breakdown, LOR tips and a live demo how to apply to a university portal. A lot of extra stuff like LinkedIn tools and hacks, networking, cold mailing tips, VISA interview tips, etc. were also shared. Also, a bunch of resources, lists and pointers were provided to make applying much easier and headache free.<span style="color: #ffb20a; font-weight: 700;" >"</span><br><br><span style="font-weight: 500; font-size: 18px; color: #ffb20a">Muhammad Yusuf Hassan,<br>IIT Gandhinagar</span></h3>
+			</div>
+
+			<div class="row">
+				<div class="col-12 text-center pt-5 pb-3">
+					<a href="https://imjo.in/XwetHh">
+						<button type="button" class="btn btn-warning"><span class="button-text px-5 py-2">REGISTER NOW!</span></button>						
+					</a>
+				</div>
+			</div>
+
+
+
+
+
+			<hr class="mb-3 mt-5" style="background-color: #606ca3;">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2>
+						You've got doubts?
+					</h2>
+				</div>
+				
+			</div>
+			<div class="row px-5 pt-3 pb-5 justify-content-center">
+				
+				<div class="col-2">
+					<a href="https://wa.me/919653167435">
+						<img  src="img/workshop-img/workshop/highlights/wa.png" class="mail-icon d-block mx-auto">						
+					</a>								
+				</div>
+				<div class="col-2">
+					<a href="mailto:help.research.etal@gmail.com">
+						<img  src="img/workshop-img/workshop/highlights/mail.png" class="mail-icon d-block mx-auto">						
+					</a>
+				</div>
+				
+				<!-- <div class="col-l">
+					<img src="img/workshop/highlights/ig.png" class="mail-icon" href="https://instagram.com/research.etal/">				
+				</div> -->
+
+				<div class="col-2">
+					<a href="https://www.facebook.com/researchetal-113773587026554/">
+						<img src="img/workshop-img/workshop/highlights/fb.png" class="mail-icon d-block mx-auto">			
+					</a>										
+				</div>
+
+				<div class="col-2">
+					<a href="https://instagram.com/research.etal">
+						<img src="img/workshop-img/workshop/highlights/ig.png" class="mail-icon d-block mx-auto">			
+					</a>			
+				</div>
+
+				<div class="col-2">
+					<a href="https://www.linkedin.com/company/56427249">
+						<img src="img/workshop-img/workshop/highlights/lin.png" class="mail-icon d-block mx-auto">			
+					</a>
+									
+				</div>
+				
+			</div>
+		</div>
+	
+	
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	</body>
+</html>

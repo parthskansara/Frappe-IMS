@@ -1,0 +1,502 @@
+<!-- text-1: reduce font-size @<420px w
+		reduce font-size @<1200px w
+
+navbar-list: do something to font or container size @<1115px
+clip -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inventory Management System</title>
+	<meta name="viewport" http-equiv="Content-Type" content="text/html; charset=UTF-8 width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet'>
+
+	<!-- ICON  -->
+	<link rel="icon" href="img/workshop-img/nonamelogo.png">
+
+	<!-- CSS -->
+	<style type="text/css">
+		html
+		{
+			scroll-behavior: smooth;
+		}
+		.logo
+		{
+			height: 48px;
+		}
+		.navbar
+		{
+			background-color: #1f2026;
+			position: sticky;
+			z-index: 1;
+		}
+		 .navbar-toggler-icon {
+		  background-image: url("img/workshop-img/h-icon.png");
+		}
+		body
+		{
+			/*background: radial-gradient(50% 50% at 50% 50%, #2F303A 52.97%, #1F2026 100%);*/
+			background-color: #1F2026;
+			
+			mix-blend-mode: normal;
+			font-family: 'Inter', sans-serif;
+			/*font-weight: 300;*/
+
+			color: #FFFFFF;
+		}
+		.lemon
+		{
+			color: #ffffff;
+		}
+		.lemon:hover
+		{
+			color: #ffb20a;
+		}
+		.footer
+		{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: #3b4263;
+			color: #FFFFFF;
+			text-align: center;
+			padding-top:10px;
+			padding-bottom: 10px; 
+			opacity: 1;
+		}
+		.footer a
+		{
+			color: #FFFFFF;
+		}
+		.cross
+		{
+			position: absolute;
+			right: 2%;
+			height: 20px;
+			width: 20px;
+
+		}
+		h1
+		{
+			font-weight: 500;
+			font-size: 45px;
+		}
+		h2
+		{
+			font-size: 25px;
+			font-weight: 500;
+		}
+		.dci
+		{
+			font-size: 20px;
+			font-weight: 300;
+		}
+		h3
+		{
+			font-size: 16px;
+			font-weight: 300;
+			/*word-spacing: 0.1em;*/
+		}
+		h6
+		{
+			font-size: 20px;
+			font-weight: 300;
+		}
+		h4
+		{
+			font-size: 10px;
+		}
+		hr 
+		{
+			background-color: #ffb20a;
+			height: 2px;
+
+		}
+		.uni
+		{
+			/*height: 60px;*/
+			width: 100%;
+			filter: drop-shadow(5px 5px 6px #000000)
+		}
+		.atoz
+		{
+			font-size: 20px;
+		}
+		.heavy
+		{
+			font-size: 25px;
+			font-weight: 500;
+		}
+		.btn
+		{
+			/*border-radius: 30px;*/
+			/*background: radial-gradient(58.75% 58.75% at 75.7% 41.25%, #2F303A 0%, #151515 100%);*/
+			background: linear-gradient(268.38deg, #F0BD4E -0.01%, #FFAF00 100%);
+         	box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.2);
+			border-radius: 141.429px;
+			border-radius: 100px;
+			height: 60px;
+			/*border-color: #ffb20a;*/
+			color: #ffffff;
+
+		}
+		.creds
+		{
+			font-size: 20px;
+		}
+		.nike
+		{
+			font-weight: 500; font-size: 18px; color: #ffb20a;
+		}
+		.hts
+		{
+			width: 60%;
+			/*height: 120px;
+			width: 120px;*/
+		}
+		.rs-text
+		{
+			line-height: 55px;
+		}
+
+		.r-icon
+		{
+			height: 40px;
+			width: 40px;
+		}
+		.ques
+		{
+			font-size: 30px;
+			font-weight: 500;
+			line-height: 56px;
+			font-style: normal;
+		}
+		.button-text
+		{ 
+			font-weight: 700;
+			font-size: 25px;
+			line-height: 33px;
+			text-align: center;
+
+			color: #1F2026;
+
+			text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07), -45px 45px 70px rgba(0, 0, 0, 0.2), -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+		}
+		.cost
+		{
+			font-size: 30px;
+		}
+		.cost1
+		{
+			font-size: 38px;
+			font-weight: 700;
+		}
+		.flat75
+		{
+			font-size: 35px;
+			font-weight: 700;
+			color: #ffb20a; 
+		}
+		.theading
+		{
+			color: #ffb20a;
+		}
+		.vr
+		{
+			color: #ffb20a;
+		}
+		.vid-ad{
+			filter: drop-shadow(0px 10px 20px #000000);
+		}
+		.mail-icon
+		{
+			width: 40%;
+		}
+		.btn:hover
+	    {
+	    	
+	    	animation: buttonshadow 0.4s ease-out;
+	    	animation-fill-mode: forwards;
+		}
+		.mail-icon:hover
+		{
+			animation: buttonshadow 0.4s ease-out;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes buttonshadow
+		{
+			from {filter: drop-shadow(0px 0px 0px #000000);}
+			to {filter: drop-shadow(0px 8px 20px #000000);}
+
+		}
+
+		.n1
+		{
+			animation: navbarfade 1s ease-out;
+			animation-fill-mode: forwards;
+		}
+		@keyframes navbarfade
+		{
+			from {top: -12vh; opacity: 0;}
+			to {top: 0vh; opacity: 1;}
+
+		}
+		li a 
+		{
+			color: #ffffff;
+			/*padding: 1.2vh 1.5vw;*/
+			border-radius: 35px;
+			font-size: 1.464vw;
+
+		}
+		li a:hover
+		{
+			background-color: #ffb20a;
+			color: #000000;
+		}
+		.active
+		{
+			
+			color: #ffb20a;
+		}
+		.asp-text
+		{
+			font-size: 22px;
+		}
+		.rs-text
+		{
+			font-size: 22px;
+		}
+
+		@media only screen and (max-width: 768px) {
+		  .button-text
+		  {
+		  	font-size: 18px;
+		  }
+		  .ques
+		  {
+		  	font-size: 20px;
+		  }
+		  .asp-text
+		  {
+		  	font-size: 18px;
+		  }
+		  .rs-text
+		  {
+		  	font-size: 18px;
+		  	line-height: 25px;
+		  }
+		  .ht-text
+		  {
+		  	font-size: 20px;
+		  }
+		  .nike
+			{
+				font-size: 14px;
+			}
+		  .mail-icon
+		  {
+		  	width: 150%;
+		  }
+		}
+
+		@media only screen and (max-width: 460px) {
+			.logo
+			{
+				height: 30px;
+
+			}
+			.nike
+			{
+				font-size: 14px;
+			}
+			.creds
+			{
+				font-size: 15px;
+				padding-top: 30px; 
+				padding-left: 50px;
+				padding-right: 15px;
+			}
+			.spk
+			{
+				text-align: center !important;
+			}
+			h1
+			{
+				font-size: 22px;
+			}
+			.heavy
+			{
+				font-size: 18px;
+				font-weight: 500;
+			}
+			.atoz
+			{
+				font-size: 16px;
+			}
+			h2
+			{
+				font-size: 21px;
+			}
+			.dci
+			{
+				padding-top: 20px !important;
+				font-size: 18px;
+			}
+		  .button-text
+		  {
+		  	font-size: 12px;
+		  	font-weight: 700;
+		  }
+		  .btn
+		  {
+		  	padding-top: 0;
+		  	padding-bottom: 0;
+		  	height: 60px
+		  }
+		  .ques
+		  {
+		  	font-size: 15px;
+		  }
+		  .asp-text
+		  {
+		  	font-size: 13px;
+		  }
+		  .rs-text
+		  {
+		  	font-size: 13px;
+		  	line-height: 20px;
+		  }
+		  .ht-text
+		  {
+		  	font-size: 15px;
+		  }
+		  h3
+		  {
+		  	font-size: 13px;
+		  }
+		  h6{
+		  	font-size: 17px;
+		  }
+
+		}
+
+
+
+		
+	</style>
+</head>
+<body>
+		<nav class="navbar navbar-expand-md
+		 navbar-fixed-top n1">
+			<a href="home" class="navbar-brand ml-md-3 mx-auto lemon">
+				<!-- LOGO -->
+				<!-- <img class="logo" src="img/home.png"> -->
+				Home
+			</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+   			<span class="navbar-toggler-icon"></span>
+ 			</button>
+  			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			    <div class="navbar-nav ml-auto">
+				      <a class="nav-item nav-link px-2 mx-3 lemon active" href="product">Products</a>
+				      <a class="nav-item nav-link px-2 mx-3 lemon" href="location">Locations</a>
+				      <a class="nav-item nav-link px-2 mx-3 lemon" href="pm">Product Movements</a>
+				      <a class="nav-item nav-link px-2 mx-3 lemon" href="report">Reports</a>
+
+			    </div>
+  			</div>
+		</nav>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center pt-4 pt-md-2">
+					<h1>
+						Inventory Management System
+					</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 text-center">
+					<h3 class="atoz">
+						View all product details here!	
+					</h3>
+					<hr class="mt-3 mx-5 hr1">
+				</div>
+			</div>
+			<div class="row justify-content-center pt-4">
+				{% if result %}
+					<table class="my-auto text-center"> 
+						<tbody>
+							<tr>
+								<th><h6>All Products</h6></th>
+							</tr>
+
+							{% for row in result %}
+							<tr>
+								<td><h6>{{ row.product_id }} </h6></td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					{%endif%}
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-6">
+					<div class="row justify-content-center pt-4">
+						<h2>Add data!</h2>
+					</div>
+					<div class="row justify-content-center pt-4">
+						<a href="#ap"><h3 style="color: #ffffff">{{ x }}</h3></a> <br>
+						
+					</div>
+					<div class="row justify-content-center pt-4">
+						<a href="product"><h4 style="color: #37eb34"><br>Refresh!</h4></a>
+						
+					</div>
+					<div class="row justify-content-center pt-4" id="ap">
+						
+						<form class="justify-content-center" method="POST" action="">
+							Product ID:  <input type="text" class = "pt-2" name="pid"/>
+							<br>
+							<input type="submit" class = "mt-4 justify-content-center" value="Add">
+						</form>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row justify-content-center pt-4">
+						<h2>Delete data!</h2>
+					</div>
+					<div class="row justify-content-center pt-4">
+						<a href="#ap"><h3 style="color: #ffffff">{{ x }}</h3></a> <br>
+						
+					</div>
+					<div class="row justify-content-center pt-4">
+						<a href="product"><h4 style="color: #37eb34"><br>Refresh!</h4></a>
+						
+					</div>
+					<div class="row justify-content-center pt-4" id="ap">
+						
+						<form class="justify-content-center" method="POST" action="">
+							Product ID:  <input type="text" class = "pt-2" name="pid"/>
+							<br>
+							<input type="submit" class = "mt-4 justify-content-center" value="Delete">
+						</form>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+			
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	</body>
+</html>
