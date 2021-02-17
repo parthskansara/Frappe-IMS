@@ -33,7 +33,37 @@ You can install it using `pip install pymysql`
 3. HTML
 * Design Basic layout of all webpages, namely Home, Products, Locations, Product Movements & Report
 * Fetch details from respective tables and display on the corresponding page
-* Create a form that takes in the primary key in each case to allow addition and deletion of data
+* Create a form that takes in the primary key in each case, to allow addition and deletion of data
+
+## Screenshots
+
+1. Home Page
+
+![home-page](/templates/img/home.jpg)
+
+2. a) Products Page
+
+![product-page](/templates/img/p1.jpg)
+
+2. b) Forms on Products Page for adding and deleting data from the database
+
+![product-page1](/templates/img/p2.jpg)
+
+2. c) Shows Success Message after data is added to the database
+
+![product-page2](/templates/img/p3.jpg)
+
+3. Locations
+
+![location-page](/templates/img/l1.jpg)
+
+3. Product Movement
+
+![productmovement-page](/templates/img/pm1.jpg)
+
+4. Reports
+
+![reports-page](/templates/img/r1.jpg)
 
 
 
