@@ -20,8 +20,8 @@ You can install it using `pip install pymysql`
 * Set up your directories, with a templates folder that holds the HTML files
 1. MySQL
 
-* Import the database from the folder *[db]* (https://github.com/parthskansara/Frappe-IMS/tree/main/db)
-* Execute the queries in the file *[queries]* (https://github.com/parthskansara/Frappe-IMS/blob/main/db/queries.sql) in the db folder
+* Import the database from the folder [db](https://github.com/parthskansara/Frappe-IMS/tree/main/db)
+* Execute the queries in the file [queries](https://github.com/parthskansara/Frappe-IMS/blob/main/db/queries.sql) in the db folder
 * Insert test values
 * Create stored procedures for directly executing queries
 
